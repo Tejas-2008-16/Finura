@@ -1,5 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-Disallow: /404.html
 
 Sitemap: https://finura-calculator.com/sitemap.xml
+
+# Block access to non-public assets
+Disallow: /assets/drafts/

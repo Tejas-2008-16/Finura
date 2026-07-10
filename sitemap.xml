@@ -1,93 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://finura-calculator.com/index.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/blog.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-home-loan-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-car-loan-explained.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-personal-vs-home.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-reduce-loan-interest.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-fixed-vs-floating.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-loan-tenure.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-credit-score.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://finura-calculator.com/blog-borrowing-mistakes.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/about.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.50</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/contact.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.50</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-home-loan-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-car-loan-explained.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-credit-score.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-fixed-vs-floating.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-personal-vs-home.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-loan-tenure.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-reduce-loan-interest.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://finura-calculator.com/blog-borrowing-mistakes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/privacy-policy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/terms.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/cookie-policy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/disclaimer.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://finura-calculator.com/sitemap.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.5</priority>
   </url>
+
 </urlset>
