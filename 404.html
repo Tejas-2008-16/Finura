@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Metadata -->
+    <title>Page Not Found | 404 Error | Finura</title>
+    <meta name="description" content="The page you are looking for does not exist. Navigate back to Finura's premium mortgage and auto loan calculation dashboard.">
+    
+    
+    <!-- Favicon -->
+    <link rel='icon' type='image/png' href='favicon.png'>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: calc(100vh - 72px - 340px); /* Adjust based on navbar and footer height */
+            padding: 80px 24px;
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: 8rem;
+            font-weight: 850;
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Aurora Background Gradients -->
+    <div class="aurora-bg">
+        <div class="aurora-glow aurora-glow-1"></div>
+        <div class="aurora-glow aurora-glow-2"></div>
+        <div class="aurora-glow aurora-glow-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>Finura</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="calculator.html" class="nav-link">EMI Calculator</a></li>
+                    <li><a href="blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="calculator.html" class="btn btn-primary btn-sm">Launch Calculator</a>
+                <button class="hamburger" aria-label="Open Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Error Content -->
+        <section class="error-container reveal">
+            <div class="glass-card" style="padding: 60px 48px; max-width: 550px; width: 100%;">
+                <div class="error-code">404</div>
+                <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 16px;">This Page Has Taken a Detour</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 0.95rem; line-height: 1.6;">
+                    The link might be broken, or the page was moved to a new folder. Let’s get your calculations back on track.
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" class="btn btn-primary">Return Home</a>
+                    <a href="calculator.html" class="btn btn-secondary">Open Calculator</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>Finura</span>
+            </a>
+                    <p class="footer-description">
+                        Premium, high-performance financial tools designed to help you analyze repayments, model prepayments, and achieve financial clarity.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <span class="footer-title">Calculators</span>
+                    <ul class="footer-links">
+                        <li><a href="calculator.html" class="footer-link">EMI Calculator</a></li>
+                        <li><a href="calculator.html?amount=300000&rate=7&tenure=30&tenureType=years" class="footer-link">Mortgage Calculator</a></li>
+                        <li><a href="calculator.html?amount=35000&rate=5.5&tenure=5&tenureType=years" class="footer-link">Car Loan Calculator</a></li>
+                        <li><a href="calculator.html?amount=10000&rate=10.99&tenure=36&tenureType=months" class="footer-link">Personal Loan Calculator</a></li>
+                        <li><a href="https://compoundly2.netlify.app/" target="_blank" rel="noopener" class="footer-link">SIP Calculator ?</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <span class="footer-title">Company</span>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog & Guides</a></li>
+                        <li><a href="sitemap.html" class="footer-link">HTML Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-newsletter">
+                        <span class="footer-title">Stay Informed</span>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Get weekly loan management tips and smart borrowing guidelines.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email address">
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Finura. All rights reserved. Designed with premium financial intelligence.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="privacy-policy.html" class="footer-bottom-link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer-bottom-link">Terms & Conditions</a></li>
+                    <li><a href="cookie-policy.html" class="footer-bottom-link">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html" class="footer-bottom-link">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

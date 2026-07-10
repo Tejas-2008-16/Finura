@@ -1,0 +1,420 @@
+/* ==========================================
+   CALCULATOR CONTAINER & GRID
+   ========================================== */
+.calc-container {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: var(--sp-8);
+    margin-top: var(--sp-10);
+    margin-bottom: var(--sp-10);
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .calc-container {
+        grid-template-columns: 1fr;
+        gap: var(--sp-6);
+    }
+}
+
+/* ==========================================
+   FORM CONTROLS & DYNAMIC SLIDERS
+   ========================================== */
+.calc-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-6);
+}
+
+.calc-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+}
+
+.calc-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    border-radius: var(--r-md);
+    padding: 2px;
+    transition: border-color var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+}
+
+.calc-input-wrapper:focus-within {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px var(--teal-dim);
+}
+
+.calc-input {
+    flex: 1;
+    padding: 12px var(--sp-4);
+    font-size: 1.25rem;
+    font-weight: 600;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+select.calc-input {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+select.calc-input option {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+}
+
+.calc-prefix, .calc-suffix {
+    padding: 0 var(--sp-4);
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* Range Sliders — Modernized with Custom Teal Styling */
+.calc-range-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    margin-top: var(--sp-2);
+}
+
+.calc-range {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 99px;
+    background: var(--border-strong);
+    outline: none;
+    transition: background var(--t-fast);
+}
+
+/* Webkit slider thumb */
+.calc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--teal);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 201, 167, 0.4);
+    transition: transform var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out);
+}
+
+.calc-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #00dab8;
+}
+
+/* Mozilla slider thumb */
+.calc-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: var(--teal);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 201, 167, 0.4);
+    transition: transform var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out);
+}
+
+.calc-range::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    background: #00dab8;
+}
+
+/* Toggle Switch Group */
+.toggle-group {
+    display: flex;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    border-radius: var(--r-md);
+    padding: 3px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 8px var(--sp-3);
+    font-size: 0.825rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: calc(var(--r-md) - 3px);
+    transition: all var(--t-fast) var(--ease-out);
+    color: var(--text-secondary);
+}
+
+.toggle-btn.active {
+    background: var(--teal);
+    color: var(--text-inverse);
+    font-weight: 600;
+}
+
+.toggle-btn:not(.active):hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="light"] .toggle-btn:not(.active):hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================
+   RESULTS SUMMARY CARD
+   ========================================== */
+.results-card {
+    padding: var(--sp-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+    height: fit-content;
+}
+
+.emi-main-metric {
+    text-align: center;
+    padding-bottom: var(--sp-6);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.emi-main-title {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: var(--sp-2);
+}
+
+.emi-main-value {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--teal);
+    letter-spacing: -0.03em;
+}
+
+.results-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-5);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-1);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.metric-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Canvas Charts Section */
+.charts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-5);
+    margin: var(--sp-4) 0;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.chart-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-6);
+    width: 100%;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+/* Colors represent Principal (Deep slate/body text) and Interest (Teal) */
+.legend-principal { background: var(--text-secondary); }
+.legend-interest { background: var(--teal); }
+
+/* Share & Action Buttons */
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+}
+
+/* ==========================================
+   AMORTIZATION SCHEDULE TABLE
+   ========================================== */
+.schedule-section {
+    margin-top: var(--sp-16);
+}
+
+.schedule-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-6);
+}
+
+.schedule-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 14px var(--sp-5);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.schedule-table th {
+    background: var(--bg-elevated);
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-row-year {
+    cursor: pointer;
+    background: transparent;
+    transition: background var(--t-fast) var(--ease-out);
+}
+
+.schedule-row-year:hover {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+[data-theme="light"] .schedule-row-year:hover {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.schedule-row-month {
+    background: rgba(0, 201, 167, 0.02);
+    display: none;
+}
+
+[data-theme="light"] .schedule-row-month {
+    background: rgba(0, 158, 131, 0.015);
+}
+
+.schedule-row-month.show {
+    display: table-row;
+}
+
+.year-toggle-icon {
+    display: inline-block;
+    transition: transform var(--t-normal) var(--ease-out);
+    margin-right: var(--sp-2);
+    color: var(--teal);
+}
+
+.schedule-row-year.expanded .year-toggle-icon {
+    transform: rotate(90deg);
+}
+
+/* Prepayment Details Card */
+.prepay-card {
+    margin-top: var(--sp-8);
+    padding: var(--sp-6);
+}
+
+.prepay-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--sp-5);
+    margin-top: var(--sp-4);
+}
+
+/* ==========================================
+   INPUT VALIDATION MESSAGES
+   ========================================== */
+.input-error {
+    font-size: 0.75rem;
+    color: var(--red);
+    margin-top: var(--sp-1);
+    display: none;
+}
+
+.calc-input-wrapper.error {
+    border-color: var(--red) !important;
+    box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.1) !important;
+}
+
+/* ==========================================
+   PRINT FRIENDLY LAYOUT OVERRIDES
+   ========================================== */
+@media print {
+    .calc-container {
+        grid-template-columns: 1fr !important;
+    }
+    .calc-group, .calc-range-wrapper, .action-grid, .prepay-card, .schedule-header-row .btn {
+        display: none !important;
+    }
+    .results-card {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
+    .chart-wrapper {
+        page-break-inside: avoid;
+    }
+    .schedule-row-month {
+        display: table-row !important;
+    }
+}
