@@ -18,6 +18,6 @@
   <text x="104" y="239" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#fff">Finura</text>
   <text x="108" y="312" font-family="Arial, sans-serif" font-size="32" fill="#c8e6df">Smart loan planning for confident</text>
   <text x="108" y="356" font-family="Arial, sans-serif" font-size="32" fill="#c8e6df">borrowing decisions.</text>
-  <rect x="108" y="414" width="250" height="54" rx="27" fill="url(#gold)"/>
-  <text x="140" y="449" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#0a3d36">FREE EMI CALCULATOR</text>
+  <rect x="108" y="414" width="294" height="54" rx="27" fill="url(#gold)"/>
+  <text x="140" y="449" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0a3d36">FREE EMI CALCULATOR</text>
 </svg>
