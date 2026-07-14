@@ -1,643 +1,399 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Metadata -->
-    <title>Finura | Free EMI Calculator – Home Loan, Car Loan &amp; Personal Loan</title>
-    <meta name="description" content="Calculate your EMI instantly with Finura's free loan calculator. Get accurate monthly installments for home, car, and personal loans with prepayment simulations, amortization tables, and multi-currency support.">
-    <link rel="canonical" href="https://finura-calculator.com/index.html">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="author" content="Tejas – tejascopywrites@gmail.com">
-    <meta name="keywords" content="EMI calculator, loan calculator, home loan EMI, car loan EMI, personal loan calculator, amortization schedule, prepayment calculator, monthly installment, interest calculator, Finura">
-    <meta name="rating" content="general">
-    <meta name="revisit-after" content="7 days">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finura | Free Loan EMI Calculator & Repayment Planner</title>
+<meta name="description" content="Plan home, car, personal and education loan repayments with a free EMI calculator, clear interest breakdown and month-by-month schedule.">
+<link rel="canonical" href="https://www.finura.in/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d4a42">
+<meta name="google-adsense-account" content="ca-pub-7598871729388798">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7598871729388798" crossorigin="anonymous"></script>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Finura">
-    <meta property="og:url" content="https://finura-calculator.com/index.html">
-    <meta property="og:title" content="Finura | Free EMI Calculator – Home, Car &amp; Personal Loan">
-    <meta property="og:description" content="Instantly calculate your loan EMI with amortization schedules, prepayment simulations, and multi-currency support. 100% free and browser-based.">
-    <meta property="og:image" content="https://finura-calculator.com/assets/og-cover.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Finura | Clear loan planning, confident decisions">
+<meta property="og:description" content="Calculate loan EMIs, understand total interest and explore a clear repayment schedule before you borrow.">
+<meta property="og:url" content="https://www.finura.in/">
+<meta property="og:site_name" content="Finura">
+<meta property="og:image" content="https://www.finura.in/og-image.svg">
+<meta property="og:image:alt" content="Finura loan planning illustration">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@tejaswrite">
-    <meta name="twitter:creator" content="@tejaswrite">
-    <meta name="twitter:url" content="https://finura-calculator.com/index.html">
-    <meta name="twitter:title" content="Finura | Free EMI Calculator – Home, Car &amp; Personal Loan">
-    <meta name="twitter:description" content="Instantly calculate your loan EMI with amortization schedules, prepayment simulations, and multi-currency support. 100% free and browser-based.">
-    <meta name="twitter:image" content="https://finura-calculator.com/assets/og-cover.jpg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Finura | Free Loan EMI Calculator">
+<meta name="twitter:description" content="Plan your EMI, total interest and repayment schedule with clarity.">
+<meta name="twitter:image" content="https://www.finura.in/og-image.svg">
 
-    
-    <!-- Favicon -->
-    <link rel='icon' type='image/png' href='favicon.png'>
+<link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Finura%22,%22short_name%22:%22Finura%22,%22theme_color%22:%22%230d4a42%22,%22background_color%22:%22%23fbfaf8%22}">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Hero Split Layout */
-        .hero-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-            padding: 100px 0 60px 0;
-        }
-        .hero-split .hero-text { text-align: left; }
-        .hero-split .hero-image img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 32px 80px rgba(0,0,0,0.5);
-            border: 1px solid var(--border-glass);
-        }
-        @media (max-width: 768px) {
-            .hero-split { grid-template-columns: 1fr; padding: 60px 0 40px 0; }
-            .hero-split .hero-text { text-align: center; }
-            .hero-split .hero-image { display: none; }
-        }
-        /* Template card images */
-        .template-card-img {
-            width: 100%;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            opacity: 0.85;
-        }
-        /* How It Works strip */
-        .how-it-works-strip {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 48px;
-        }
-        .how-it-step { text-align: center; }
-        .how-it-step img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            border: 1px solid var(--border-glass);
-        }
-        @media (max-width: 768px) {
-            .how-it-works-strip { grid-template-columns: 1fr; }
-        }
-    </style>
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Finura",
-      "url": "https://finura-calculator.com",
-      "logo": "https://finura-calculator.com/assets/logo.png",
-      "email": "tejascopywrites@gmail.com",
-      "sameAs": [
-        "https://youtube.com/@tejaswrite"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Tejas",
-        "email": "tejascopywrites@gmail.com"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Finura",
-      "url": "https://finura-calculator.com",
-      "description": "Free online EMI calculator for home loans, car loans, and personal loans with prepayment simulations and amortization schedules.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://finura-calculator.com/blog.html?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Finura EMI Calculator",
-      "url": "https://finura-calculator.com/calculator.html",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "A free, browser-based EMI calculator supporting home loans, car loans, and personal loans with multi-currency, prepayment simulation, and amortization schedule."
-    }
-    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Finura",
+  "url": "https://www.finura.in/",
+  "description": "Free online EMI calculator and loan planning guides for home, car, personal, education and business loans.",
+  "areaServed": "IN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Finura",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Aurora Background Gradients -->
-    <div class="aurora-bg">
-        <div class="aurora-glow aurora-glow-1"></div>
-        <div class="aurora-glow aurora-glow-2"></div>
-        <div class="aurora-glow aurora-glow-3"></div>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="brand-mark.svg" alt="Finura">
+      Finura
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li class="has-dropdown">
+          <a href="home-loan-guide.html" aria-haspopup="true">Loan Guides</a>
+          <ul class="dropdown">
+            <li><a href="home-loan-guide.html">Home Loan EMI</a></li>
+            <li><a href="personal-loan-guide.html">Personal Loan EMI</a></li>
+            <li><a href="car-loan-guide.html">Car Loan EMI</a></li>
+            <li><a href="education-loan-guide.html">Education Loan EMI</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="all-articles.html" aria-haspopup="true">Articles</a>
+          <ul class="dropdown">
+            <li><a href="how-to-calculate-emi.html">How EMI Is Calculated</a></li>
+            <li><a href="fixed-vs-floating.html">Fixed vs Floating Rates</a></li>
+            <li><a href="reduce-emi-guide.html">How to Reduce Your EMI</a></li>
+            <li><a href="loan-prepayment-guide.html">Loan Prepayment Explained</a></li>
+            <li><a href="credit-score-guide.html">Understanding Credit Score</a></li>
+            <li><a href="all-articles.html">All Articles</a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="about.html" class="btn btn-secondary">About Us</a>
+      <a href="calculator.html" class="btn btn-primary">Open Calculator</a>
     </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
 
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="container navbar-container">
-            <a href="index.html" class="logo">
-                <div class="logo-mark">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <span>Finura</span>
-            </a>
-            
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="calculator.html" class="nav-link">EMI Calculator</a></li>
-                    <li><a href="blog.html" class="nav-link">Guides</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+<main id="main">
 
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Light/Dark Theme">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                </button>
-                <a href="calculator.html" class="btn btn-primary btn-sm">Launch Calculator</a>
-                <button class="hamburger" aria-label="Open Navigation Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Free · No sign-up · Instant results</span>
+        <h1>Know your EMI before your lender does.</h1>
+        <p class="lede">A clear, honest loan calculator that shows your monthly payment, total interest, and full repayment schedule &mdash; so you can compare offers and negotiate with confidence.</p>
+        <div class="hero-actions">
+          <a href="calculator.html" class="btn btn-primary">Calculate My EMI</a>
+          <a href="how-to-calculate-emi.html" class="btn btn-secondary">How EMI Works</a>
         </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main>
-        <!-- Hero Section (Split Layout) -->
-        <section class="reveal">
-            <div class="container">
-                <div class="hero-split">
-                    <div class="hero-text">
-                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-primary); font-weight: 700; display: inline-block; margin-bottom: 16px;">Precision Loan Management</span>
-                        <h1 style="font-size: 3.75rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -1px; line-height: 1.1;">
-                            Navigate Your Financial Future with <span class="text-gradient">Precision</span>
-                        </h1>
-                        <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.7;">
-                            Calculate repayments, simulate lump-sum prepayments, view automated amortization tables, and extract clean reports with the web's most premium loan planning engine.
-                        </p>
-                        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                            <a href="calculator.html" class="btn btn-primary">Start Calculating</a>
-                            <a href="blog.html" class="btn btn-secondary">Read Loan Guides</a>
-                        </div>
-                        <div style="display: flex; gap: 32px; margin-top: 40px; flex-wrap: wrap;">
-                            <div>
-                                <div style="font-size: 2rem; font-weight: 800; color: var(--accent-primary);">100%</div>
-                                <div style="font-size: 0.8rem; color: var(--text-secondary);">Browser-Side Privacy</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 2rem; font-weight: 800; color: var(--accent-secondary);">0ms</div>
-                                <div style="font-size: 0.8rem; color: var(--text-secondary);">Server Calls</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold);">8+</div>
-                                <div style="font-size: 0.8rem; color: var(--text-secondary);">Financial Guides</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <!-- Unsplash: Finance dashboard / laptop on desk — Free to use -->
-                        <img 
-                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&auto=format&fit=crop" 
-                            alt="Financial planning and loan calculation dashboard on a modern laptop" 
-                            loading="eager"
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Google AdSense Top Ad Placeholder -->
-        <div class="container">
-            <div class="ads-placeholder">
-                <!-- AdSense Responsive Banner code goes here -->
-            </div>
+        <div class="trust-row">
+          <div class="stat"><b>7</b><span>Loan calculators</span></div>
+          <div class="stat"><b>15+</b><span>In-depth guides</span></div>
+          <div class="stat"><b>100%</b><span>Free, always</span></div>
         </div>
+      </div>
 
-        <!-- Features Showcase Section -->
-        <section id="features" class="reveal reveal-delay-1" style="padding: 60px 0;">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <h2 style="font-size: 2.25rem; margin-bottom: 16px;">Engineered for Financial Clarity</h2>
-                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Everything you need to analyze your mortgages, auto loans, and personal credit lines.</p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
-                    <!-- Card 1 -->
-                    <div class="glass-card glass-card-interactive" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-                        <div style="width: 48px; height: 48px; background: rgba(99, 102, 241, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-secondary);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
-                        </div>
-                        <h3 style="font-size: 1.35rem; font-weight: 600;">Advanced Amortization</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Receive granular year-by-year and month-by-month payment schedules detailing principal and interest components.</p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="glass-card glass-card-interactive" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-                        <div style="width: 48px; height: 48px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <h3 style="font-size: 1.35rem; font-weight: 600;">Prepayment Simulation</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Model recurring or single bulk prepayments. Calculate total interest saved and find out how many months you can shave off.</p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="glass-card glass-card-interactive" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-                        <div style="width: 48px; height: 48px; background: rgba(245, 158, 11, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-gold);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
-                        </div>
-                        <h3 style="font-size: 1.35rem; font-weight: 600;">Interactive Visuals</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Inspect dynamic charts computed directly in-browser. Instantly visualizes interest-to-principal proportions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Template Section -->
-        <section class="reveal" style="padding: 60px 0; background: rgba(255,255,255,0.01);">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 48px;">
-                    <h2 style="font-size: 2rem;">Pre-Configured Financial Templates</h2>
-                    <p style="color: var(--text-secondary);">Select a template below to load real-world default profiles into the engine.</p>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-                    <!-- Home Loan Template Card -->
-                    <a href="calculator.html?amount=350000&rate=6.5&tenure=30&tenureType=years&down=70000" class="glass-card glass-card-interactive" style="padding: 0; display: block; overflow: hidden; border-top: 4px solid var(--accent-secondary);">
-                        <!-- Unsplash: Modern house / home exterior — Free to use -->
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&auto=format&fit=crop" alt="Modern home representing a home loan mortgage" class="template-card-img" style="border-radius: 0; margin: 0;">
-                        <div style="padding: 20px;">
-                            <h4 style="margin-bottom: 8px;">Home Loan / Mortgage</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">$350,000 at 6.5% interest rate for a tenure of 30 Years.</p>
-                            <span style="font-size: 0.85rem; color: var(--accent-secondary); font-weight: 600;">Load Template →</span>
-                        </div>
-                    </a>
-                    
-                    <!-- Car Loan Template Card -->
-                    <a href="calculator.html?amount=45000&rate=5.2&tenure=5&tenureType=years&down=5000" class="glass-card glass-card-interactive" style="padding: 0; display: block; overflow: hidden; border-top: 4px solid var(--accent-primary);">
-                        <!-- Unsplash: Modern car on road — Free to use -->
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80&auto=format&fit=crop" alt="Modern automobile representing a car loan" class="template-card-img" style="border-radius: 0; margin: 0;">
-                        <div style="padding: 20px;">
-                            <h4 style="margin-bottom: 8px;">Auto / Car Loan</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">$45,000 at 5.2% interest rate for a tenure of 5 Years.</p>
-                            <span style="font-size: 0.85rem; color: var(--accent-primary); font-weight: 600;">Load Template →</span>
-                        </div>
-                    </a>
-                    
-                    <!-- Personal Loan Template Card -->
-                    <a href="calculator.html?amount=15000&rate=10.5&tenure=36&tenureType=months" class="glass-card glass-card-interactive" style="padding: 0; display: block; overflow: hidden; border-top: 4px solid var(--accent-gold);">
-                        <!-- Unsplash: Credit card / personal finance — Free to use -->
-                        <img src="https://images.unsplash.com/photo-1580508174046-170816f65662?w=600&q=80&auto=format&fit=crop" alt="Credit card representing personal loan" class="template-card-img" style="border-radius: 0; margin: 0;">
-                        <div style="padding: 20px;">
-                            <h4 style="margin-bottom: 8px;">Personal Credit Line</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">$15,000 at 10.5% interest rate for a tenure of 36 Months.</p>
-                            <span style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600;">Load Template →</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Educational Content Section -->
-        <section class="reveal" style="padding: 80px 0;">
-            <div class="container">
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;" class="text-gradient">Understanding EMIs and Loan Repayments</h2>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary);">What is EMI?</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 16px; line-height: 1.7;">
-                            An <strong>Equated Monthly Installment (EMI)</strong> is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMIs are applied to both interest and principal each month, so that over a specified number of years, the loan is fully paid off. It offers the benefit of predictability, allowing borrowers to budget their cash flows precisely.
-                        </p>
-                    </div>
-
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary);">How EMI is Calculated (The Formula)</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.7;">
-                            The mathematical formula used to compute the monthly installment is:
-                        </p>
-                        <div class="glass-card" style="padding: 24px; text-align: center; margin-bottom: 20px;">
-                            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">
-                                EMI = [P * r * (1 + r)^n] / [(1 + r)^n - 1]
-                            </span>
-                        </div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
-                            Where:<br>
-                            • <strong>P</strong> represents the Principal Loan Amount (net of down payment).<br>
-                            • <strong>r</strong> represents the Monthly Interest Rate (calculated as Annual Interest Rate divided by 12, then divided by 100).<br>
-                            • <strong>n</strong> represents the Total Number of Monthly Payments (tenure in years multiplied by 12, or directly in months).
-                        </p>
-                    </div>
-
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary);">Fixed vs. Floating Interest Rates</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 16px; line-height: 1.7;">
-                            • <strong>Fixed Interest Rate:</strong> The rate remains constant throughout the loan tenure. This guarantees stable, unchanging EMIs, shielding you from market fluctuations. However, fixed rates are typically set higher at initiation.<br>
-                            • <strong>Floating Interest Rate:</strong> The rate changes periodically based on benchmark market indices. When index rates drop, your EMIs decrease; when they rise, your EMIs increase. This option generally starts lower but introduces volatility.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-primary);">Tips to Reduce Your Total Interest Outlay</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 12px; line-height: 1.7;">
-                            <strong>1. Implement Prepayments:</strong> Adding small recurring monthly prepayments or periodic lump-sum payments directly pays off the principal balance, saving significant cumulative interest.<br>
-                            <strong>2. Negotiate Tenure:</strong> While shorter tenures demand higher monthly payments, they dramatically reduce the long-term interest paid to the bank.<br>
-                            <strong>3. Balance Transfer:</strong> Keep an eye on market rates. If rates fall significantly below your current contract, transferring the outstanding balance to another lender can be highly profitable.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Google AdSense Native Ad Placeholder -->
-        <div class="container">
-            <div class="ads-placeholder ads-native-placeholder">
-                <!-- AdSense Native Ad Code goes here -->
-            </div>
+      <div class="preview-card" aria-hidden="false">
+        <h3>Sample: ₹25,00,000 home loan · 8.5% · 20 yrs</h3>
+        <div class="preview-emi">
+          <div class="amount" id="hero-preview-emi"><span class="cur">₹</span>0</div>
+          <div class="preview-row"><span class="label">Monthly EMI</span></div>
         </div>
+        <div class="preview-row"><span class="label">Total interest payable</span><span class="value" id="hero-preview-interest">—</span></div>
+        <div class="preview-row"><span class="label">Total amount payable</span><span class="value" id="hero-preview-total">—</span></div>
+        <a href="calculator.html" class="btn btn-primary btn-block preview-action">Try with your numbers</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- FAQ Section -->
-        <section class="reveal faq-section" style="background: rgba(255,255,255,0.01);">
-            <div class="container">
-                <div class="faq-title-area">
-                    <h2 style="font-size: 2.25rem; margin-bottom: 16px;">Frequently Asked Questions</h2>
-                    <p style="color: var(--text-secondary);">Clear answers to common questions about interest rates, payments, and schedules.</p>
-                </div>
+  <!-- Ad slot -->
+  <div class="container"><!-- Header Ad --></div>
 
-                <div class="faq-accordion">
-                    <!-- Q1 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What is an EMI (Equated Monthly Installment)?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            An EMI is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. Each payment consists of both a principal portion and an interest portion. Over the loan's life, the portion going toward principal increases, while the interest portion decreases.
-                        </div>
-                    </details>
-                    
-                    <!-- Q2 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>How does a down payment affect my monthly EMI?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            A down payment reduces the net loan principal required from the lender. Because the calculated EMI is based on the remaining principal balance, a larger down payment directly lowers your monthly installment amount and saves you money on interest.
-                        </div>
-                    </details>
-
-                    <!-- Q3 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>How is interest portion calculated monthly?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            The interest for a given month is calculated by multiplying the outstanding loan balance at the beginning of that month by the monthly interest rate (annual interest rate divided by 12, then divided by 100). The rest of your EMI goes toward reducing the principal.
-                        </div>
-                    </details>
-
-                    <!-- Q4 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What is the difference between a fixed and floating interest rate?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            A fixed rate remains identical throughout the loan's tenure, offering predictable payments. A floating rate changes in response to market benchmark changes, meaning your EMIs can rise or fall over time.
-                        </div>
-                    </details>
-
-                    <!-- Q5 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>How does loan prepayment work?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Prepayment refers to paying off a portion of your outstanding loan principal before it is officially due. Since interest is calculated on the remaining balance, prepaying reduces the total interest you owe and helps you close the loan early.
-                        </div>
-                    </details>
-
-                    <!-- Q6 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>Is there a penalty for prepaying a loan?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Many floating-rate home loans do not charge prepayment penalties. However, fixed-rate loans or personal loans might have a prepayment fee (often 1% to 3% of the prepaid principal). Always check your loan agreement details first.
-                        </div>
-                    </details>
-
-                    <!-- Q7 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What is an amortization schedule?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            An amortization schedule is a complete table showing the breakdown of every monthly payment over the entire tenure. It displays the opening balance, the payment, interest portion, principal portion, and the closing balance for each period.
-                        </div>
-                    </details>
-
-                    <!-- Q8 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What does a processing fee mean?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            A processing fee is a one-time administrative fee charged by the financial institution to process your loan application. It can be a fixed dollar amount or a percentage of the total loan (e.g. 1% to 2%), and is usually paid upfront or deducted from the disbursed amount.
-                        </div>
-                    </details>
-
-                    <!-- Q9 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>How does my credit score impact my EMI rate?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Lenders use your credit score to evaluate risk. A higher credit score (typically 750 or above) signals low risk, helping you qualify for the lowest available interest rates. Lower interest rates directly lower your monthly EMI.
-                        </div>
-                    </details>
-
-                    <!-- Q10 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>Should I choose a shorter tenure or lower EMIs?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            A shorter tenure requires higher monthly EMIs but results in much lower total interest paid overall. A longer tenure lowers your monthly payment obligation (improving cash flow) but costs you significantly more in total interest over time.
-                        </div>
-                    </details>
-
-                    <!-- Q11 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What is a flat interest rate vs reducing balance rate?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            A flat interest rate calculates interest on the initial full principal throughout the entire term. A reducing balance rate calculates interest only on the remaining outstanding principal. Reducing balance rates are much cheaper in actual cost.
-                        </div>
-                    </details>
-
-                    <!-- Q12 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>Can I refinance or transfer my loan?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Yes, if market interest rates drop or your credit score improves significantly, you can transfer your outstanding balance to a new lender offering a lower rate. This process is called refinancing.
-                        </div>
-                    </details>
-
-                    <!-- Q13 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What happens if I miss a monthly installment?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Missing an EMI triggers late fees and negatively impacts your credit history, lowering your score. If you default for several months, the lender may take legal action or repossess the collateral (such as a house or car).
-                        </div>
-                    </details>
-
-                    <!-- Q14 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>Does inflation affect fixed-rate EMIs?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Inflation does not change the dollar amount of a fixed EMI. In fact, since inflation lowers the real value of money over time, a fixed EMI effectively becomes "cheaper" in terms of purchasing power as years pass.
-                        </div>
-                    </details>
-
-                    <!-- Q15 -->
-                    <details class="faq-item glass-card">
-                        <summary class="faq-summary">
-                            <span>What are common loan mistakes to avoid?</span>
-                            <div class="faq-icon-toggle"></div>
-                        </summary>
-                        <div class="faq-content">
-                            Common mistakes include: borrowing more than you can comfortably repay, neglecting to compare lenders, ignoring the total cost of interest in favor of only looking at the monthly payment, and forgetting to factor in fees.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                <div class="logo-mark">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <span>Finura</span>
-            </a>
-                    <p class="footer-description">
-                        Premium, high-performance financial tools designed to help you analyze repayments, model prepayments, and achieve financial clarity.
-                    </p>
-                    <!-- Social & Contact Links -->
-                    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                        <!-- YouTube -->
-                        <a href="https://youtube.com/@tejaswrite" target="_blank" rel="noopener noreferrer" aria-label="Visit Tejas on YouTube" style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--border-default); border-radius: var(--r-md); color: var(--text-secondary); font-size: 0.8rem; transition: all 0.2s;" onmouseover="this.style.borderColor='#ff0000'; this.style.color='#ff0000'" onmouseout="this.style.borderColor='var(--border-default)'; this.style.color='var(--text-secondary)'">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                            YouTube
-                        </a>
-                        <!-- Email -->
-                        <a href="mailto:tejascopywrites@gmail.com" aria-label="Email Tejas" style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--border-default); border-radius: var(--r-md); color: var(--text-secondary); font-size: 0.8rem; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--teal)'; this.style.color='var(--teal)'" onmouseout="this.style.borderColor='var(--border-default)'; this.style.color='var(--text-secondary)'">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            Email Us
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <span class="footer-title">Calculators</span>
-                    <ul class="footer-links">
-                        <li><a href="calculator.html" class="footer-link">EMI Calculator</a></li>
-                        <li><a href="calculator.html?amount=300000&rate=7&tenure=30&tenureType=years" class="footer-link">Mortgage Calculator</a></li>
-                        <li><a href="calculator.html?amount=35000&rate=5.5&tenure=5&tenureType=years" class="footer-link">Car Loan Calculator</a></li>
-                        <li><a href="calculator.html?amount=10000&rate=10.99&tenure=36&tenureType=months" class="footer-link">Personal Loan Calculator</a></li>
-                        <li><a href="https://compoundly2.netlify.app/" target="_blank" rel="noopener" class="footer-link">SIP Calculator ?</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <span class="footer-title">Company</span>
-                    <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        <li><a href="blog.html" class="footer-link">Blog & Guides</a></li>
-                        <li><a href="sitemap.html" class="footer-link">HTML Sitemap</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <div class="footer-newsletter">
-                        <span class="footer-title">Stay Informed</span>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Get weekly loan management tips and smart borrowing guidelines.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email address">
-                            <button type="submit" class="newsletter-btn">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Finura. All rights reserved. Designed with premium financial intelligence.</p>
-                <ul class="footer-bottom-links">
-                    <li><a href="privacy-policy.html" class="footer-bottom-link">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="footer-bottom-link">Terms & Conditions</a></li>
-                    <li><a href="cookie-policy.html" class="footer-bottom-link">Cookie Policy</a></li>
-                    <li><a href="disclaimer.html" class="footer-bottom-link">Disclaimer</a></li>
-                </ul>
-            </div>
+  <!-- FEATURES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Why this tool</span>
+        <h2>Built for people comparing real loan offers</h2>
+        <p>Not a lead-generation form. No phone number required. Just the numbers you need to make a decision.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon" aria-hidden="true">⏱</div>
+          <h3>Instant, accurate results</h3>
+          <p>Standard reducing-balance EMI formula, the same method banks and NBFCs use, calculated live as you type.</p>
         </div>
-    </footer>
+        <div class="card">
+          <div class="icon" aria-hidden="true">📊</div>
+          <h3>Visual interest breakdown</h3>
+          <p>A simple chart shows exactly how much of your repayment is principal versus interest, at a glance.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">📋</div>
+          <h3>Full amortization schedule</h3>
+          <p>See the month-by-month breakdown of every payment, right down to your final EMI. Printable for your records.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">🏠</div>
+          <h3>Seven loan types</h3>
+          <p>Home, car, bike, personal, education, business and mortgage EMI &mdash; each with guidance specific to that loan.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <h3>Nothing leaves your browser</h3>
+          <p>Every calculation runs locally in JavaScript. We never see, store or transmit the numbers you enter.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">📚</div>
+          <h3>Plain-English guides</h3>
+          <p>Fifteen-plus articles that explain the concepts lenders assume you already know &mdash; without the jargon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Main JavaScript -->
-    <script src="main.js"></script>
+  <!-- WHY USE / BENEFITS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Before you sign</span>
+        <h2>What an EMI calculator actually tells you</h2>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <p>Most people focus on the EMI amount alone &mdash; can I afford this number every month? That matters, but it's only half the picture. The same loan amount can cost you lakhs more or less depending on the tenure you choose, and lenders rarely volunteer that comparison.</p>
+          <p>A calculator lets you test decisions before you commit to them: What happens if I choose 15 years instead of 20? What does a 0.5% rate difference actually cost over the life of the loan? What if I make a lump-sum prepayment in year three?</p>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Compare lenders fairly.</strong> Two offers with different rates and processing fees become easy to compare once you see total cost, not just EMI.</li>
+            <li><strong>Plan your budget realistically.</strong> Understand what share of your monthly income the EMI will consume before you're locked in.</li>
+            <li><strong>Spot the cost of a longer tenure.</strong> A lower EMI over a longer period often means paying significantly more interest overall.</li>
+            <li><strong>Model prepayment strategies.</strong> See how extra payments shorten your loan and reduce total interest.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR LOAN TYPES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Calculators</span>
+        <h2>Popular loan types</h2>
+        <p>Every loan behaves a little differently. Pick yours for guidance tailored to that loan type.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card loan-card">
+          <h3>Home Loan</h3>
+          <span class="rate">Typical rate: 8.0% – 9.5%</span>
+          <p>Long tenures, lower rates, largest ticket size.</p>
+          <a href="home-loan-guide.html" class="link">Read the guide →</a>
+        </div>
+        <div class="card loan-card">
+          <h3>Car Loan</h3>
+          <span class="rate">Typical rate: 8.5% – 11%</span>
+          <p>Shorter tenures, asset-backed, faster approval.</p>
+          <a href="car-loan-guide.html" class="link">Read the guide →</a>
+        </div>
+        <div class="card loan-card">
+          <h3>Personal Loan</h3>
+          <span class="rate">Typical rate: 10.5% – 18%</span>
+          <p>Unsecured, flexible use, higher interest rates.</p>
+          <a href="personal-loan-guide.html" class="link">Read the guide →</a>
+        </div>
+        <div class="card loan-card">
+          <h3>Education Loan</h3>
+          <span class="rate">Typical rate: 9% – 13%</span>
+          <p>Moratorium periods, co-applicant requirements.</p>
+          <a href="education-loan-guide.html" class="link">Read the guide →</a>
+        </div>
+      </div>
+      <p class="text-center action-top"><a href="calculator.html" class="btn btn-secondary">See all seven calculators</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Quick answers</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="content-centered">
+        <details class="faq-item">
+          <summary>What is EMI?</summary>
+          <p>EMI stands for Equated Monthly Installment &mdash; a fixed payment you make every month toward a loan, made up of a portion of principal and a portion of interest.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is this calculator accurate?</summary>
+          <p>It uses the same standard reducing-balance formula lenders use. Your actual EMI may vary slightly due to processing fees, rate resets, or how your lender rounds figures.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does a longer tenure always mean I pay more?</summary>
+          <p>You pay less per month but more in total interest over the life of the loan, because interest accrues on the outstanding balance for longer.</p>
+        </details>
+      </div>
+      <p class="text-center action-top"><a href="faq.html" class="btn btn-ghost">View all 30 questions →</a></p>
+    </div>
+  </section>
+
+  <!-- Ad slot -->
+  <div class="container"><!-- In Article Ad --></div>
+
+  <!-- LATEST ARTICLES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Learn</span>
+        <h2>Latest guides</h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="card article-card" href="how-to-calculate-emi.html">
+          <span class="tag">Fundamentals</span>
+          <h3>How EMI Is Calculated</h3>
+          <p>The formula lenders use, worked through with real numbers, so you can check any loan quote yourself.</p>
+          <span class="meta">9 min read</span>
+        </a>
+        <a class="card article-card" href="fixed-vs-floating.html">
+          <span class="tag">Interest Rates</span>
+          <h3>Fixed vs Floating Interest Rates</h3>
+          <p>Which one actually saves you money, and how to decide based on your risk tolerance and loan tenure.</p>
+          <span class="meta">8 min read</span>
+        </a>
+        <a class="card article-card" href="reduce-emi-guide.html">
+          <span class="tag">Strategy</span>
+          <h3>How to Reduce Your EMI</h3>
+          <p>Six practical, realistic levers &mdash; from tenure extension to rate negotiation &mdash; and what each one actually costs.</p>
+          <span class="meta">10 min read</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Who uses this</span>
+        <h2>Trusted by first-time borrowers and seasoned planners alike</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card testimonial">
+          <p>"I compared three home loan offers side by side using the amortization table. Ended up choosing the one with a slightly higher rate but no prepayment penalty &mdash; saved more in the end."</p>
+          <div class="who"><div class="avatar">R</div><div><b>Rohan M.</b><span>First-time homebuyer</span></div></div>
+        </div>
+        <div class="card testimonial">
+          <p>"The prepayment article changed how I think about my car loan. I didn't realize how much a single extra EMI a year would shave off the tenure."</p>
+          <div class="who"><div class="avatar">S</div><div><b>Sneha K.</b><span>Car loan borrower</span></div></div>
+        </div>
+        <div class="card testimonial">
+          <p>"Simple, fast, and it doesn't ask for my phone number just to show a number. That alone puts it above most calculators I tried."</p>
+          <div class="who"><div class="avatar">A</div><div><b>Arjun P.</b><span>Personal loan applicant</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="disclaimer-note">
+        <strong>Financial disclaimer:</strong> Finura is an independent educational tool. It is not a bank, lender, or registered financial advisor, and results are estimates only. Actual EMI, interest rates and charges are set by your lender and may include processing fees, insurance, or other costs not reflected here. Please verify figures with your lender and consult a qualified financial advisor before making borrowing decisions. Read our full <a href="disclaimer.html">disclaimer</a>.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img class="brand-logo" src="brand-mark.svg" alt="Finura">
+          Finura
+        </div>
+        <p>Independent, free loan planning tools for Indian borrowers. Not a bank, lender or financial advisor.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="calculator.html">EMI Calculator</a></li>
+          <li><a href="home-loan-guide.html">Home Loan</a></li>
+          <li><a href="car-loan-guide.html">Car Loan</a></li>
+          <li><a href="personal-loan-guide.html">Personal Loan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="how-to-calculate-emi.html">How EMI Works</a></li>
+          <li><a href="fixed-vs-floating.html">Fixed vs Floating</a></li>
+          <li><a href="reduce-emi-guide.html">Reduce Your EMI</a></li>
+          <li><a href="credit-score-guide.html">Credit Score</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="all-articles.html">All Articles</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms of Use</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> Finura. All figures are indicative estimates only.</span>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

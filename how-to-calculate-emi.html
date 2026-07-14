@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How EMI Is Calculated: The Formula Explained With Examples</title>
+<meta name="description" content="Learn exactly how EMI is calculated, the formula lenders use, a worked example with real numbers, and common mistakes to avoid when checking a loan quote.">
+<link rel="canonical" href="https://www.finura.in/how-to-calculate-emi.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d4a42">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How EMI Is Calculated: The Formula Explained">
+<meta property="og:description" content="The EMI formula, a worked example, and how to verify any lender's quote yourself.">
+<meta property="og:url" content="https://www.finura.in/how-to-calculate-emi.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How EMI Is Calculated: The Formula Explained With Examples",
+  "description": "The EMI formula, a worked example, and how to verify any lender's quote yourself.",
+  "author": {"@type":"Organization","name":"Finura"},
+  "publisher": {"@type":"Organization","name":"Finura"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.finura.in/index.html"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.finura.in/all-articles.html"},
+    {"@type":"ListItem","position":3,"name":"How EMI Is Calculated","item":"https://www.finura.in/how-to-calculate-emi.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Does prepayment reduce EMI or tenure?","acceptedAnswer":{"@type":"Answer","text":"It depends on your lender and your instruction. Most lenders let you choose: reduce the tenure while keeping EMI the same, or reduce the EMI while keeping tenure the same. Reducing tenure usually saves more total interest."}},
+    {"@type":"Question","name":"Why is my first EMI mostly interest?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged on the outstanding balance, which is highest at the start of the loan. As the balance shrinks each month, the interest portion shrinks too and the principal portion grows, even though the EMI itself stays constant."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand"><img class="brand-logo" src="brand-mark.svg" alt="Finura"> Finura</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li class="has-dropdown"><a href="home-loan-guide.html" aria-haspopup="true">Loan Guides</a>
+          <ul class="dropdown"><li><a href="home-loan-guide.html">Home Loan EMI</a></li><li><a href="personal-loan-guide.html">Personal Loan EMI</a></li><li><a href="car-loan-guide.html">Car Loan EMI</a></li><li><a href="education-loan-guide.html">Education Loan EMI</a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="how-to-calculate-emi.html" aria-haspopup="true" aria-current="page">Articles</a>
+          <ul class="dropdown"><li><a href="how-to-calculate-emi.html">How EMI Is Calculated</a></li><li><a href="fixed-vs-floating.html">Fixed vs Floating Rates</a></li><li><a href="reduce-emi-guide.html">How to Reduce Your EMI</a></li><li><a href="loan-prepayment-guide.html">Loan Prepayment Explained</a></li><li><a href="credit-score-guide.html">Understanding Credit Score</a></li><li><a href="all-articles.html">All Articles</a></li></ul>
+        </li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta"><a href="about.html" class="btn btn-secondary">About Us</a><a href="calculator.html" class="btn btn-primary">Open Calculator</a></div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container breadcrumbs">
+    <a href="index.html">Home</a><span class="sep">/</span><a href="all-articles.html">Articles</a><span class="sep">/</span><span class="current">How EMI Is Calculated</span>
+  </div>
+
+  <article class="container section-tight">
+    <header class="article-header">
+      <span class="eyebrow">Fundamentals · 9 min read</span>
+      <h1>How EMI Is Calculated: The Formula Explained With Examples</h1>
+      <p>The exact formula lenders use, worked through with real numbers, so you can verify any loan quote yourself instead of taking it on faith.</p>
+    </header>
+
+    <div class="article-body">
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#what-is-emi">What EMI actually means</a></li>
+          <li><a href="#the-formula">The EMI formula</a></li>
+          <li><a href="#worked-example">A worked example</a></li>
+          <li><a href="#why-interest-first">Why early EMIs are mostly interest</a></li>
+          <li><a href="#mistakes">Common mistakes when checking a quote</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-is-emi">What EMI actually means</h2>
+      <p>EMI stands for Equated Monthly Installment. It is the fixed amount you pay your lender every month until a loan is fully repaid. "Equated" is the key word: the payment itself does not change from month to month, even though what that payment is made of does.</p>
+      <p>Every EMI is really two payments bundled into one: a portion that goes toward reducing what you borrowed (the principal) and a portion that pays for the cost of borrowing it (the interest). Lenders calculate this split, called an amortization schedule, in advance for the entire tenure of the loan, and it is fixed the moment your loan is disbursed at a given rate.</p>
+
+      <h2 id="the-formula">The EMI formula</h2>
+      <p>Lenders in India, and most lenders globally, use the reducing-balance method to calculate EMI. The formula is:</p>
+      <blockquote>EMI = P × r × (1 + r)<sup>n</sup> ÷ [(1 + r)<sup>n</sup> − 1]</blockquote>
+      <p>Where:</p>
+      <ul>
+        <li><strong>P</strong> is the principal loan amount &mdash; the amount you actually borrow.</li>
+        <li><strong>r</strong> is the monthly interest rate, calculated as the annual rate divided by 12, then divided by 100 to convert it to a decimal.</li>
+        <li><strong>n</strong> is the loan tenure in months, not years.</li>
+      </ul>
+      <p>This looks intimidating, but it is just compound interest applied in reverse: instead of growing a deposit, it is spreading a fixed repayment evenly across a shrinking balance.</p>
+
+      <h2 id="worked-example">A worked example</h2>
+      <p>Say you borrow <strong>₹25,00,000</strong> at <strong>8.5% per annum</strong> for <strong>20 years (240 months)</strong>.</p>
+      <table>
+        <thead><tr><th>Variable</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Principal (P)</td><td>₹25,00,000</td></tr>
+          <tr><td>Annual rate</td><td>8.5%</td></tr>
+          <tr><td>Monthly rate (r)</td><td>8.5 ÷ 12 ÷ 100 = 0.007083</td></tr>
+          <tr><td>Tenure (n)</td><td>240 months</td></tr>
+        </tbody>
+      </table>
+      <p>Plugging these into the formula gives an EMI of approximately <strong>₹21,700 per month</strong>. Over 240 months, you'd pay roughly <strong>₹52.1 lakh</strong> in total &mdash; meaning the interest alone costs more than the amount you originally borrowed. This is exactly the kind of number that stays hidden if you only ever look at the monthly figure. You can check this instantly, and test different rates or tenures, using our <a href="calculator.html">EMI calculator</a>.</p>
+      <div class="callout">
+        <strong>Tip:</strong> Two loans with the same EMI can have very different total costs if their tenures differ. Always compare total interest, not just the monthly payment, when weighing two offers.
+      </div>
+
+      <h2 id="why-interest-first">Why early EMIs are mostly interest</h2>
+      <p>Interest is calculated each month on whatever principal balance is still outstanding. At the start of a 20-year loan, almost the entire loan amount is still outstanding, so the interest portion of your first EMI is large and the principal portion is small. As you keep paying, the outstanding balance shrinks, so the interest charged each month shrinks with it &mdash; and because the EMI itself never changes, more of it goes toward principal instead.</p>
+      <p>This is why the amortization schedule matters more than people expect. In the example above, roughly the first third of the tenure is spent paying down more interest than principal. Anyone planning to sell a property or close a loan early should look at this schedule before assuming they've "paid off most of it" just because they've made a lot of payments.</p>
+
+      <h2 id="mistakes">Common mistakes when checking a quote</h2>
+      <ul>
+        <li><strong>Using the annual rate directly in the formula.</strong> The formula needs the monthly rate. Forgetting to divide by 12 will produce a wildly wrong EMI.</li>
+        <li><strong>Ignoring processing fees and insurance.</strong> The EMI formula only covers principal and interest. Add-on charges from your lender change your true cost of borrowing, even though they don't appear in the EMI figure itself.</li>
+        <li><strong>Comparing EMIs without comparing tenure.</strong> A lower EMI is not automatically a better deal if it comes with a longer tenure and higher total interest.</li>
+        <li><strong>Assuming a fixed rate stays fixed forever.</strong> Many "fixed" rate loans in India are only fixed for an initial period. Check whether your rate is genuinely fixed for the full tenure. See our guide on <a href="fixed-vs-floating.html">fixed vs floating interest rates</a>.</li>
+      </ul>
+
+      <div class="ad-slot"><!-- In Article Ad --></div>
+
+      <h2 id="faqs">FAQs</h2>
+      <h3>Does prepayment reduce EMI or tenure?</h3>
+      <p>It depends on your lender and your instruction. Most lenders let you choose: reduce the tenure while keeping EMI the same, or reduce the EMI while keeping tenure the same. Reducing tenure usually saves more total interest. Read more in our <a href="loan-prepayment-guide.html">prepayment guide</a>.</p>
+      <h3>Why is my first EMI mostly interest?</h3>
+      <p>Because interest is charged on the outstanding balance, which is highest at the start of the loan. As the balance falls each month, the interest portion falls too, even though the EMI stays the same.</p>
+
+      <h2>Summary</h2>
+      <p>EMI is calculated using a standard reducing-balance formula based on your principal, monthly interest rate, and tenure in months. Understanding the formula lets you verify any lender's quote, compare offers on total cost rather than monthly payment alone, and understand why your loan balance falls slowly at first and faster later on. Use our <a href="calculator.html">EMI calculator</a> to run your own numbers and see the full amortization schedule.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="brand" style="color:#fff;"><img class="brand-logo" src="brand-mark.svg" alt="Finura"> Finura</div><p>Independent, free loan planning tools for Indian borrowers. Not a bank, lender or financial advisor.</p></div>
+      <div><h4>Calculators</h4><ul><li><a href="calculator.html">EMI Calculator</a></li><li><a href="home-loan-guide.html">Home Loan</a></li><li><a href="car-loan-guide.html">Car Loan</a></li><li><a href="personal-loan-guide.html">Personal Loan</a></li></ul></div>
+      <div><h4>Guides</h4><ul><li><a href="how-to-calculate-emi.html">How EMI Works</a></li><li><a href="fixed-vs-floating.html">Fixed vs Floating</a></li><li><a href="reduce-emi-guide.html">Reduce Your EMI</a></li><li><a href="credit-score-guide.html">Credit Score</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="all-articles.html">All Articles</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookies.html">Cookie Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-current-year></span> Finura. All figures are indicative estimates only.</span><div style="display:flex;gap:16px;flex-wrap:wrap;"><a href="privacy-policy.html">Privacy</a><a href="terms-and-conditions.html">Terms</a><a href="disclaimer.html">Disclaimer</a></div></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

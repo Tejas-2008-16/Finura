@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Finura</title>
+  <desc id="desc">Smart loan planning and EMI calculators for confident borrowing decisions.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c96a"/>
+      <stop offset="100%" stop-color="#d4a843"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a3d36"/>
+  <path d="M0 496C191 430 308 533 495 459s313-175 705-111V630H0z" fill="#0d4a42"/>
+  <path d="M0 534c182-57 347 41 538-47 167-77 296-116 662-67" fill="none" stroke="#1a6b5e" stroke-width="3" opacity=".7"/>
+  <rect x="860" y="175" width="130" height="130" rx="36" fill="#0d4a42"/>
+  <path d="M895 205h70v18H915v20h45v18H915v39h-20V205z" fill="url(#gold)"/>
+  <path d="M955 205c10 8 18 18 21 30" fill="none" stroke="#6ecfb8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="976" cy="235" r="6" fill="#6ecfb8"/>
+  <g fill="#6ecfb8" opacity=".8"><circle cx="767" cy="116" r="5"/><circle cx="735" cy="147" r="4"/><circle cx="697" cy="168" r="3"/></g>
+  <text x="104" y="239" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#fff">Finura</text>
+  <text x="108" y="312" font-family="Arial, sans-serif" font-size="32" fill="#c8e6df">Smart loan planning for confident</text>
+  <text x="108" y="356" font-family="Arial, sans-serif" font-size="32" fill="#c8e6df">borrowing decisions.</text>
+  <rect x="108" y="414" width="250" height="54" rx="27" fill="url(#gold)"/>
+  <text x="140" y="449" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#0a3d36">FREE EMI CALCULATOR</text>
+</svg>
